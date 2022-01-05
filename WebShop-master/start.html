@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebShop</title>
+    <link rel="stylesheet" href="./css/tptpstil.css" />
+
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="./js/jQuery.js"
+    ></script>
+    <script>
+      $(window).on("beforeunload", function () {
+        $("body").hide();
+        $(window).scrollTop(0);
+      });
+    </script>
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="./js/preloader.js"
+    ></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/fadeIn.js"></script>
+    <script src="./js/slideLeft.js"></script>
+    <script src="./js/tptpobrazac.js"></script>
+    <script src="./js/subscribe.js"></script>
+    <script
+      src="https://kit.fontawesome.com/75cf2dfb1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body onload="animateHTML().init();">
+    <div class="social">
+      <a href="https://www.facebook.com">
+        <img src="./assets/facebook.png" alt="" />
+      </a>
+      <a href="https://www.instagram.com">
+        <img src="./assets/instagram.png" alt="" />
+      </a>
+      <a href="https://www.twitter.com">
+        <img src="./assets/twitter.png" alt="" />
+      </a>
+    </div>
+    <div class="dostava">
+      <img src="./assets/transport.png" alt="" />
+      <h4>BESPLATNA DOSTAVA ŠIROM BIH!</h4>
+      <img src="./assets/transport.png" alt="" />
+    </div>
+    <div class="topnav">
+      <table>
+        <tr>
+          <td>
+            <div class="logo">
+              <span
+                style="
+                  position: relative;
+                  bottom: 15px;
+                  padding-left: 20px;
+                  padding-right: 15px;
+                  font-size: 30px;
+                  cursor: pointer;
+                  display: inline-block;
+                "
+                onclick="openNav('leftSidenav')"
+                >&#9776;
+              </span>
+              <a href="start.html">
+                <img src="./assets/logo.png" alt="bag" />
+                <h1>WebShop.</h1>
+              </a>
+            </div>
+          </td>
+          <td>
+            <div class="navbuttons">
+              <form>
+                <input
+                  type="search"
+                  placeholder="npr. Košulje"
+                  aria-label="Search"
+                />
+                <button type="submit">
+                  Pretraži
+                </button>
+              </form>
+              <a href="start.html">
+                Početna
+              </a>
+              <a href="proizvodi.html">
+                Proizvodi
+              </a>
+              <a href="kontakt.html">
+                Kontakt
+              </a>
+              <span onclick="openNav('rightSidenav')">
+                Partneri
+              </span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="coverimg">
+      <div class="title1">
+        <h1>20% Popusta</h1>
+      </div>
+      <div class="title2">
+        <h1>Na nove artikle iz ljetne kolekcije</h1>
+        <a href="proizvodi.html">
+          Na ponudu
+        </a>
+      </div>
+    </div>
+    <div class="shop-category">
+      <h1>
+        Kolekcije.
+      </h1>
+      <table>
+        <tr>
+          <td>
+            <a href="proizvodi.html">
+              <div class="kol1 fade-in-element hidden">
+                <h2>Proljeće.</h2>
+              </div>
+            </a>
+          </td>
+          <td style="width: 30%;">
+            <a href="proizvodi.html">
+              <div class="kol2 fade-in-element hidden">
+                <h2>Ljeto.</h2>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="proizvodi.html">
+              <div class="kol3 fade-in-element hidden">
+                <h2>Jesen.</h2>
+              </div>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="subscribe fade-in-element hidden">
+      <div class="signup">
+        Novi katalozi svake sedmice!<br />
+        <form name="subform" onsubmit="return subscribe();">
+          <input
+            name="subinput"
+            type="text"
+            placeholder="Email"
+            aria-label="Search"
+          />
+          <button name="subbutt" type="submit">
+            Pretplati me
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="shoe"></div>
+
+    <div class="slider-wrapper">
+      <div class="post-slider">
+        <h1 class="slider-title fade-in-element hidden">
+          Popularno na instagramu.
+        </h1>
+        <i class="fas fa-chevron-left prev"></i>
+        <i class="fas fa-chevron-right next"></i>
+        <div class="post-wrapper">
+          <div class="post">
+            <img class="slider-image" src="./assets/insta1.png" alt="" />
+            <div class="post-info">
+              <h3>
+                <a href="https://www.instagram.com" target="_blank"
+                  >Life is a party, Dress like it.</a
+                >
+              </h3>
+              <i class="fab fa-instagram"> <h4>andrej</h4></i>
+              <i class="far fa-calendar"> <h4>Maj 5.</h4></i>
+            </div>
+          </div>
+          <div class="post">
+            <img class="slider-image" src="./assets/insta2.png" alt="" />
+            <div class="post-info">
+              <h3>
+                <a href="https://www.instagram.com" target="_blank"
+                  >Always dress well but keep it simple.</a
+                >
+              </h3>
+              <i class="fab fa-instagram"> <h4>skphotoreflection</h4></i>
+              <i class="far fa-calendar"> <h4>Maj 14.</h4></i>
+            </div>
+          </div>
+          <div class="post">
+            <img class="slider-image" src="./assets/insta3.png" alt="" />
+            <div class="post-info">
+              <h3>
+                <a href="https://www.instagram.com" target="_blank"
+                  >Quality never goes out of style.</a
+                >
+              </h3>
+              <i class="fab fa-instagram"> <h4>ray.ban</h4></i>
+              <i class="far fa-calendar"> <h4>April 8.</h4></i>
+            </div>
+          </div>
+          <div class="post">
+            <img class="slider-image" src="./assets/insta4.png" alt="" />
+            <div class="post-info">
+              <h3>
+                <a href="https://www.instagram.com" target="_blank"
+                  >Some call it arrogant; I call it confident.</a
+                >
+              </h3>
+              <i class="fab fa-instagram"> <h4>luisa.viaroma</h4></i>
+              <i class="far fa-calendar"> <h4>Maj 10.</h4></i>
+            </div>
+          </div>
+          <div class="post">
+            <img class="slider-image" src="./assets/insta5.png" alt="" />
+            <div class="post-info">
+              <h3>
+                <a href="https://www.instagram.com" target="_blank"
+                  >A style is primarily a matter of instinct.</a
+                >
+              </h3>
+              <i class="fab fa-instagram"> <h4>fashion.studio</h4></i>
+              <i class="far fa-calendar"> <h4>Maj 12.</h4></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form fade-in-element hidden">
+      <h1>KONTAKTIRAJTE NAS.</h1>
+
+      <form
+        name="form-start"
+        id="form"
+        class="topBefore"
+        onsubmit="return validateForm('start');"
+      >
+        <input
+          name="name-start"
+          id="name"
+          autocomplete="off"
+          type="text"
+          placeholder="IME"
+        />
+        <input
+          name="number-start"
+          id="number"
+          type="text"
+          autocomplete="off"
+          placeholder="BROJ TELEFONA"
+        />
+        <input
+          name="email-start"
+          id="email"
+          type="text"
+          autocomplete="off"
+          placeholder="E-MAIL"
+        />
+        <textarea
+          id="message-start"
+          type="text"
+          autocomplete="off"
+          placeholder="PORUKA"
+        ></textarea>
+        <input id="submit" type="submit" value="POŠALJI" />
+      </form>
+    </div>
+    <div class="footer">
+      <h1>
+        Dizajnirali:
+      </h1>
+
+      <h2>
+        2020. godine
+      </h2>
+      <div style="padding-right: 220px;" class="author">
+        <img src="./assets/tarik.jpg" alt="" />
+        Tarik Džambić
+      </div>
+      <div style="padding-right: 220px;" class="author">
+        <img src="./assets/nedim.png" alt="" />
+        Nedim Dželilović
+      </div>
+      <div class="author">
+        <img src="./assets/amar.png" alt="" />
+        Amar Džindić
+      </div>
+    </div>
+  </body>
+  <div id="rightSidenav" class="sidenavRight">
+    <h1>Partneri</h1>
+    <a
+      href="javascript:void(0)"
+      class="closebtn"
+      onclick="closeNav('rightSidenav')"
+      >&times;</a
+    >
+    <div class="partner-pic">
+      <a href="https://shop.alma-ras.com" target="_blank">
+        <img src="./assets/almaRas.png" alt="" /><br />
+        Alma Ras</a
+      >
+    </div>
+    <div class="partner-pic">
+      <a href="https://www.zara.com/ba/" target="_blank">
+        <img src="./assets/zara.png" alt="" /><br />
+        Zara</a
+      >
+    </div>
+    <div class="partner-pic">
+      <a href="https://www.hm.com/ba/" target="_blank">
+        <img src="./assets/hm.png" alt="" /><br />
+        H&M</a
+      >
+    </div>
+    <div class="partner-pic">
+      <a href="https://www.kenzo.com/eu/en/home" target="_blank">
+        <img src="./assets/kenzo.png" alt="" /><br />
+        Kenzo</a
+      >
+    </div>
+  </div>
+  <div id="leftSidenav" class="sidenavLeft">
+    <h1>Autori</h1>
+    <a
+      href="javascript:void(0)"
+      class="closebtn"
+      onclick="closeNav('leftSidenav');resetPic();"
+      >&times;</a
+    >
+    <div class="imgcont">
+      <div class="profile-pic">
+        <img id="tarikSl" src="./assets/tarik.jpg" alt="" />
+        <a
+          id="tarikTxt"
+          href="#"
+          onclick="slideLeft('tarikSl','tarikTxt','aboutTarik');"
+          >Tarik Džambić</a
+        >
+      </div>
+      <div class="about" id="aboutTarik">
+        <h2>Usmjerenje:</h2>
+        <h3>AR</h3>
+        <br />
+        <h2>E-mail:</h2>
+        <h3>tarik.dzambic@fet.ba</h3>
+        <br />
+        <h2>Kontakt:</h2>
+        <h3>+387603399399</h3>
+        <br />
+      </div>
+    </div>
+
+    <div class="imgcont">
+      <div class="profile-pic">
+        <img id="nedimSl" src="./assets/nedim.png" alt="" />
+        <a
+          id="nedimTxt"
+          href="#"
+          onclick="slideLeft('nedimSl','nedimTxt','aboutNedim');"
+          >Nedim Dželilović</a
+        >
+      </div>
+      <div class="about" id="aboutNedim">
+        <h2>Usmjerenje:</h2>
+        <h3>AR</h3>
+        <br />
+        <h2>E-mail:</h2>
+        <h3>nedim.dzelilovic@fet.ba</h3>
+        <br />
+        <h2>Kontakt:</h2>
+        <h3>+387601231231</h3>
+        <br />
+      </div>
+    </div>
+
+    <div id="amar" class="imgcont">
+      <div style="padding-bottom: 100px;" class="profile-pic">
+        <img id="amarSl" src="./assets/amar.png" alt="" />
+        <a
+          id="amarTxt"
+          href="#"
+          onclick="slideLeft('amarSl','amarTxt','aboutAmar');"
+          >Amar Džindić</a
+        >
+      </div>
+      <div class="about" id="aboutAmar">
+        <h2>Usmjerenje:</h2>
+        <h3>ESKE</h3>
+        <br />
+        <h2>E-mail:</h2>
+        <h3>amar.dzindic@fet.ba</h3>
+        <br />
+        <h2>Kontakt:</h2>
+        <h3>+387604564564</h3>
+        <br />
+      </div>
+    </div>
+  </div>
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+  </div>
+</html>

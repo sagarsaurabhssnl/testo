@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proizvodi</title>
+    <link rel="stylesheet" href="./css/tptpstil.css" />
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="./js/jQuery.js"
+    ></script>
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="./js/preloader.js"
+    ></script>
+    <script src="./js/Sort.js"></script>
+    <script src="./js/fadeIn.js"></script>
+  </head>
+
+  <body>
+    <div class="social">
+      <a href="https://www.facebook.com">
+        <img src="./assets/facebook.png" alt="" />
+      </a>
+      <a href="https://www.instagram.com">
+        <img src="./assets/instagram.png" alt="" />
+      </a>
+      <a href="https://www.twitter.com">
+        <img src="./assets/twitter.png" alt="" />
+      </a>
+    </div>
+    <div class="dostava">
+      <img src="./assets/transport.png" alt="" />
+      <h4>BESPLATNA DOSTAVA ŠIROM BIH!</h4>
+      <img src="./assets/transport.png" alt="" />
+    </div>
+    <div class="topnav">
+      <table>
+        <tr>
+          <td>
+            <div class="logo">
+              <a href="start.html">
+                <img src="./assets/logo.png" alt="bag" />
+                <h1>WebShop.</h1>
+              </a>
+            </div>
+          </td>
+          <td>
+            <div class="navbuttons">
+              <form>
+                <input
+                  type="search"
+                  placeholder="npr. Košulje"
+                  aria-label="Search"
+                />
+                <button type="submit">
+                  Pretraži
+                </button>
+              </form>
+              <a href="start.html">
+                Početna
+              </a>
+              <a href="proizvodi.html">
+                Proizvodi
+              </a>
+              <a href="kontakt.html">
+                Kontakt
+              </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="podjela">
+      <table width="100%" >
+          <tr>
+              <td style="width: 20%; vertical-align: top; padding-left: 50px;padding-top: 50px;position: fixed;" >
+                <h2 style="text-decoration: underline;padding-bottom: 35px;">Filteri</h2>
+                  <b>Sortiraj po cjeni:</b><br>
+                  <button class="button" onclick="sortTablelow()">Najviše</button></br>
+                  <button class="button" onclick="sortTable()">Najniže</button></br>
+                  <br><b>Sortiraj po nazivu:</b><br>
+                      <button class="button" onclick="sortTableAZ()">A-Z</button></br>
+                      <button class="button" onclick="sortTableZA()">Z-A</button></br>
+                  
+              </td>
+              <td>
+                  <table width="80%" style="float: right; padding-right: 80px;" id="myTable">
+                      <tr style="box-shadow: none;">
+                          <td></td>
+                          <td><h2>Opis</h2></td>
+                          <td></td>
+                          <td style="text-align: right;"><h2>Cijena</h2></td>
+                      </tr>
+                      <tr class="fade-in-element">
+                          <td><img src="./assets/duks.jpg" class="slika"></td>
+                          <td>ADIDAS Dukserica PRIME HOODIE<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/adidas.png" alt=""></td>
+                          <td style="text-align: right;font-weight: bold;">119.00<td>KM</td></td>
+                          
+                      </tr>
+                      <tr  class="fade-in-element">
+                          <td><img src="./assets/duks1.jpg" class="slika"></td>
+                          <td>UNDER ARMOUR Dukserica UA /MOVE FZ<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/under-armour.png" alt=""></td>
+                          <td style="text-align: right;font-weight: bold;">127.20<td>KM</td></td>
+                      </tr>
+                      <tr  class="fade-in-element">
+                          <td><img src="./assets/duks2.jpg" class="slika"></td>
+                          <td>UNDER ARMOUR Dukserica RIVAL FLEECE<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/under-armour.png" alt=""></td>
+                          <td style="text-align: right;font-weight: bold;">71.20<td>KM</td></td>
+                      </tr>
+                      <tr class="fade-in-element">
+                          <td><img src="./assets/duks4.jpg" class="slika"></td>
+                          <td>CHAMPION Dukserica CREWNECK SWEATSHIRT<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/champion.png" alt=""></td>
+                          <td  style="text-align: right;font-weight: bold;">59.50<td>KM</td></td>
+                      </tr>
+                      <tr  class="fade-in-element">
+                          <td><img src="./assets/duks5.jpg" class="slika"></td>
+                          <td>LOTTO Dukserica DIEGO FZ HD<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/lotto.png" alt=""></td>
+                          <td   style="text-align: right;font-weight: bold;">53.40<td>KM</td></td>
+                      </tr>
+                      <tr  class="fade-in-element">
+                          <td><img src="./assets/duks7.jpg" class="slika"></td>
+                          <td>LONSDALE Dukserica FLAG HOODIE<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/lonsdale.png" alt=""></td>
+                          <td style="text-align: right;font-weight: bold;">48.50<td>KM</td></td>
+                      </tr>
+                      <tr   class="fade-in-element">
+                          <td><img src="./assets/duks9.jpg" class="slika"></td>
+                          <td>HELLY HANSEN Dukserica SHORE HYBRID INSULATOR<br><br><b>Dostupne veličine: </b>S, M, L, XL</td>
+                          <td class="itemLogo"><img src="./assets/helly.png" alt=""></td>
+                          <td style="text-align: right;font-weight: bold;">188.00<td>KM</td></td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+    </div>
+  </body>
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+  </div>
+</html>
